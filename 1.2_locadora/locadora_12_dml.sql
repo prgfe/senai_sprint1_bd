@@ -1,13 +1,19 @@
-USE Exercicio_1_2;
+USE Exercicio_1_2_tarde;
 
 INSERT INTO Empresa(NomeEmpresa)
 VALUES('Los Carecas')
+
+INSERT INTO Empresa(NomeEmpresa)
+VALUES('Los Calvos'),('Los Calveludos'),('Los Marombas'),('Los Ciclistas')
 
 INSERT INTO Modelo(Modelo)
 VALUES('Renegade')
 
 INSERT INTO Marca(Marca)
 VALUES('Jeep')
+
+INSERT INTO Marca(Marca)
+VALUES('Chery'),('Volvo'),('Lexus'),('Nissan'),('Honda')
 
 INSERT INTO Cliente(Nome,CPF)
 VALUES('Carlos Eduardo','12345678901')
