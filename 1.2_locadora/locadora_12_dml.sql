@@ -1,4 +1,4 @@
-USE Exercico_1_2;
+USE Exercicio_1_2;
 
 INSERT INTO Empresa(NomeEmpresa)
 VALUES('Los Carecas')

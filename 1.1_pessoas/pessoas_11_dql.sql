@@ -6,10 +6,9 @@
 USE Exercicio_1_1
 
 SELECT 
-	
 	Pessoa.Nome,
-	Telefone.Numero AS Telefone,
-	Email.Endereco AS Email,
+	Telefone.Numero,
+	Email.Endereco,
 	Pessoa.CNH
 
 FROM 
@@ -21,13 +20,5 @@ WHERE
 	Pessoa.IdPessoa = Email.IdPessoa
 	AND Pessoa.IdPessoa = Telefone.IdPessoa
 
-ORDER BY
-	Nome DESC
+ORDER BY Nome DESC
 
-insert into Pessoa
-values
-	('Bruno','123789'),
-	('Daniel','7891234'),
-	('Emanuel','123912');
-
-	select * from pessoa

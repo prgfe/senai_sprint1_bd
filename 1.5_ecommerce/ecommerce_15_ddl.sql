@@ -1,0 +1,60 @@
+CREATE DATABASE Exercicio_1_5;
+
+USE Exercicio_1_5;
+
+CREATE TABLE SenaiShop
+(
+	IdSenaiShop INT PRIMARY KEY IDENTITY,
+	Nome VARCHAR(30) NOT NULL
+)
+
+CREATE TABLE Cliente
+(
+	IdCliente INT PRIMARY KEY IDENTITY,
+	Nome VARCHAR(20) NOT NULL
+)
+
+CREATE TABLE Categorias
+(
+	IdCategorias INT PRIMARY KEY IDENTITY,
+	IdSenaiShop INT FOREIGN KEY REFERENCES SenaiShop(IdSenaiShop) NOT NULL,
+	Secoes VARCHAR(15) NOT NULL
+)
+
+CREATE TABLE Subcategorias
+(
+	IdSubcategorias INT PRIMARY KEY IDENTITY,
+	IdCategorias INT FOREIGN KEY REFERENCES Categorias(IdCategorias) NOT NULL,
+	Subsecoes VARCHAR(20) NOT NULL
+)
+
+CREATE TABLE Produtos
+(
+	IdProdutos INT PRIMARY KEY IDENTITY,
+	IdSubcategorias INT FOREIGN KEY REFERENCES Subcategorias(IdSubcategorias) NOT NULL,
+	Nome VARCHAR(25) NOT NULL
+)
+
+CREATE TABLE Pedidos
+(
+	IdPedidos INT PRIMARY KEY IDENTITY,
+	IdCliente INT FOREIGN KEY REFERENCES Cliente(IdCliente) NOT NULL,
+	Numero VARCHAR(25) NOT NULL
+)
+
+CREATE TABLE ProdutosPedidos
+(
+	IdProdutosPedidos INT PRIMARY KEY IDENTITY,
+	IdProdutos INT FOREIGN KEY REFERENCES Produtos(IdProdutos) NOT NULL,
+	IdPedidos INT FOREIGN KEY REFERENCES Pedidos(IdPedidos) NOT NULL,
+	Nome VARCHAR(25) NOT NULL,
+	Numero VARCHAR(20) NOT NULL
+)
+
+SELECT * FROM SenaiShop
+SELECT * FROM Cliente
+SELECT * FROM Categorias
+SELECT * FROM Subcategorias
+SELECT * FROM Produtos
+SELECT * FROM Pedidos
+SELECT * FROM ProdutosPedidos

@@ -1,0 +1,52 @@
+CREATE DATABASE Exercicio_1_6;
+
+USE Exercicio_1_6;
+
+CREATE TABLE Conserto
+(
+	IdConserto INT PRIMARY KEY IDENTITY,
+	Tipo VARCHAR(40) NOT NULL
+)
+
+CREATE TABLE Itens
+(
+	IdItens INT PRIMARY KEY IDENTITY,
+	Nome VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE Cliente
+(
+	IdCliente INT PRIMARY KEY IDENTITY,
+	Nome VARCHAR(30)
+)
+
+CREATE TABLE Colaborador
+(
+	IdColaborador INT PRIMARY KEY IDENTITY,
+	Nome VARCHAR(30)
+)
+
+CREATE TABLE Pedidos
+(
+	IdPedidos INT PRIMARY KEY IDENTITY,
+	IdConserto INT FOREIGN KEY REFERENCES Conserto(IdConserto) NOT NULL,
+	IdItens INT FOREIGN KEY REFERENCES Itens(IdItens) NOT NULL,
+	IdCliente INT FOREIGN KEY REFERENCES Cliente(IdCliente) NOT NULL,
+	Numero VARCHAR(10) NOT NULL
+)
+
+CREATE TABLE PedidosColaborador
+(
+	IdPedidosColaborador INT PRIMARY KEY IDENTITY,
+	IdPedidos INT FOREIGN KEY REFERENCES Pedidos(IdPedidos) NOT NULL,
+	IdColaborador INT FOREIGN KEY REFERENCES Colaborador(IdColaborador) NOT NULL,
+	Nome VARCHAR(30) NOT NULL,
+	Numero VARCHAR(10) NOT NULL
+)
+
+SELECT * FROM Conserto
+SELECT * FROM Cliente
+SELECT * FROM Colaborador
+SELECT * FROM Itens
+SELECT * FROM Pedidos
+SELECT * FROM PedidosColaborador

@@ -1,6 +1,6 @@
-CREATE DATABASE Exercico_1_2;
+CREATE DATABASE Exercicio_1_2;
 
-USE Exercico_1_2;
+USE Exercicio_1_2;
 
 CREATE TABLE Empresa
 (
