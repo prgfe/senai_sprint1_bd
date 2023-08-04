@@ -1,6 +1,6 @@
 CREATE DATABASE Exercicio_1_2_tarde;
-
-USE Exercicio_1_2_tarde;
+DROP DATABASE Exercicio_1_2_tarde
+USE Exercicio_1_2_tarde
 
 CREATE TABLE Empresa
 (
@@ -31,7 +31,8 @@ CREATE TABLE Aluguel
 (
 	IdAluguel INT PRIMARY KEY IDENTITY,
 	IdVeiculo INT FOREIGN KEY REFERENCES Veiculo(IdVeiculo) NOT NULL,
-	NumeroAluguel VARCHAR(10) NOT NULL UNIQUE
+	IdCliente INT FOREIGN KEY REFERENCES Cliente(IdCliente) NOT NULL,
+	Protocolo VARCHAR(10) NOT NULL UNIQUE
 )
 
 CREATE TABLE Veiculo
