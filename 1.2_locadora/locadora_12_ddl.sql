@@ -1,5 +1,5 @@
 CREATE DATABASE Exercicio_1_2_tarde;
-DROP DATABASE Exercicio_1_2_tarde
+
 USE Exercicio_1_2_tarde
 
 CREATE TABLE Empresa
