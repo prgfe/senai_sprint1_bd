@@ -1,6 +1,6 @@
-CREATE DATABASE Exercicio_1_4;
+CREATE DATABASE Exercicio_1_4_tarde
 
-USE Exercicio_1_4;
+USE Exercicio_1_4_tarde
 
 CREATE TABLE Artistas
 (

@@ -1,6 +1,6 @@
-CREATE DATABASE Exercicio_1_3;
+CREATE DATABASE Exercicio_1_3_tarde
 
-USE Exercicio_1_3;
+USE Exercicio_1_3_tarde
 
 CREATE TABLE Clinica
 (
@@ -28,7 +28,7 @@ CREATE TABLE Raca
 
 CREATE TABLE Veterinario
 (
-	IdVeterinario INT PRIMARY KEY,
+	IdVeterinario INT PRIMARY KEY IDENTITY,
 	IdClinica INT FOREIGN KEY REFERENCES Clinica(IdClinica) NOT NULL,
 	Nome VARCHAR(30) NOT NULL,
 	CRMV VARCHAR(5) NOT NULL UNIQUE
